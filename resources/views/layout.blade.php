@@ -44,7 +44,8 @@
     </script>
 
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <blade
+        vite|(%5B%26%2339%3Bresources%2Fcss%2Fapp.css%26%2339%3B%2C%20%26%2339%3Bresources%2Fjs%2Fapp.js%26%2339%3B%5D)>
 
 </head>
 
@@ -58,40 +59,20 @@
     </div>
 
 
-    <nav class="nav" id="navigation">
-        <ul class="nav__list">
+    @php
+        $navigationLinks = [
+        // ['label' => 'about', 'route' => 'about'],
+        // ['label' => 'blog', 'route' => 'blog'],
+        // ['label' => 'consulting', 'route' => 'consulting'],
+        ['label' => 'home', 'route' => 'home'],
+        // ['label' => 'learning', 'route' => 'learning'],
+        // ['label' => 'projects', 'route' => 'projects'],
+        // ['label' => 'uses', 'route' => 'uses'],
+        ];
+    @endphp
 
+    <x-navigation-menu :links="$navigationLinks" />
 
-            <li>
-                <a href="{{ route('about') }}">about</a>
-            </li>
-
-            <li>
-                <a href="{{ route('blog') }}">blog</a>
-            </li>
-
-            <li>
-                <a href="{{ route('consulting') }}">consulting</a>
-            </li>
-
-            <li>
-                <a href="{{ route('home') }}">home</a>
-            </li>
-
-            <li>
-                <a href="{{ route('learning') }}">learning</a>
-            </li>
-
-            <li>
-                <a href="{{ route('projects') }}">projects</a>
-            </li>
-
-            <li>
-                <a href="{{ route('uses') }}">uses</a>
-            </li>
-
-        </ul>
-    </nav>
 
 
     <main>
