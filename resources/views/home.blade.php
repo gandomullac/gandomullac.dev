@@ -1,75 +1,27 @@
 @extends('layout')
 
+{{-- @pushOnce('style') --}}
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+{{-- @endPushOnce --}}
+
 @section('content')
-
-<style>
-    .splash-container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px
-    }
-
-    .splash-container {
-        font-size: 18px
-    }
-
-    .splash h1 {
-        font-size: 3em;
-        line-height: 1;
-        letter-spacing: -.03em;
-        margin: 0
-    }
-
-    .splash h2 {
-        font-size: 2.25em;
-        font-weight: 500;
-        line-height: 1.25;
-        max-width: 22em;
-        letter-spacing: -.03em
-    }
-
-    .fancy {
-        color: #9013fe
-    }
-
-    .handle {
-        display: inline-block;
-        margin-top: .275em;
-        color: #9b9b9b;
-        letter-spacing: .5px
-    }
-
-    .writing {
-        text-decoration: none;
-        color: #9013fe
-    }
-
-    main {
-        padding-top: 0;
-        padding-bottom: 0;
-        height: 100%
-    }
-
-    .social-icons {
-        justify-content: flex-start;
-        padding-top: 1rem;
-        margin-left: -.8rem
-    }
-
-</style>
 
 
 <div class="splash-container">
     <div class="splash">
 
-        <h1>Hi, I'm Claudio<span class="fancy">.</span></h1>
+        {{-- <h1>Hi, I'm Claudio<span class="fancy">.</span></h1> --}}
+
+        <div>
+            <h1>Hi, I'm <span id="typed-output">Claudio Gandini</span></h1>
+        </div>
+
+
 
         <span class="handle">@gandomullac</span>
 
         <h2>
-            Test Driven Developer
+            Test Driven <span class="fancy-underline">Developer</span>
         </h2>
 
 
@@ -90,4 +42,56 @@
     </div>
 </div>
 
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Funzione per generare ritardi casuali
+        function randomDelay(base, variance) {
+            return Math.floor(Math.random() * variance) + base;
+        }
+
+        // Mostra la prima scritta e aspetta 3 secondi
+        setTimeout(function() {
+            var options = {
+                strings: [
+                    "Claudio Gandini",
+                    "Gando",
+                    "Claude",
+                    "Clod",
+                    "Clœd",
+                    "Clöd",
+                    "Cloddo",
+                    "Cloddoman",
+                    "CL",
+                    "Super",
+                    "S.",
+                    "Super Clod",
+                    "Suuupah",
+                    "KRAUT",
+                    "Ganz",
+                    "Ganzerker",
+                    "Callum",
+                    "Mullac",
+                    "CLOOOOOOOOD",
+                    "Gando McCallum",
+                ],
+                typeSpeed: 70,
+                backSpeed: 50,
+                backDelay: 2000,
+                loop: true,
+                preStringTyped: function(arrayPos, self) {
+                    // Modifica i tempi di digitazione e cancellazione per renderli più casuali
+                    self.typeSpeed = randomDelay(40, 70);
+                    self.backSpeed = randomDelay(25, 50);
+                },
+                onStringTyped: function(arrayPos, self) {
+                    // Modifica i tempi di backDelay per renderli più casuali
+                    self.backDelay = randomDelay(1500, 2500);
+                }
+            };
+
+            var typed = new Typed("#typed-output", options);
+        }, 2500); // Attendi 3 secondi prima di iniziare Typed.js
+    });
+</script>
 @endsection
