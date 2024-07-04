@@ -23,7 +23,7 @@
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}" />
 
-    @include('style')
+    <x-styles />
 
     <link rel="alternate" type="application/rss+xml+xml" href="{{ env('APP_URL') }}"
         title="gandomullac.dev" />
