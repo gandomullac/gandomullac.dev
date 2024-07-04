@@ -32,25 +32,25 @@
                             href="#avv-natati---feb-2023">#</a></h3>
                     <p>Visit the project at <a href="https://www.avvocatoangelanatati.it" target="_blank"
                             rel="noreferrer noopener">www.avvocatoangelanatati.it</a>.</p>
-                    <p><strong>Objective</strong>: Produrre il sito web per uno studio legale locale, sfruttando il
-                        materiale dalla precedente iterazione prodotta da un altro sviluppatore. Il sito deve avere le
-                        caratteristiche di un CMS, con prestazioni adeguate e un aspetto estetico accattivante.</p>
+                    <p><strong>Objective</strong>: To produce the website for a local law firm, utilizing the material
+                        from the previous iteration produced by another developer. The website must have the
+                        characteristics of a CMS, with adequate performance and an attractive aesthetic appearance.</p>
                     <p>
-                        <strong>Context</strong>: Inizialmente, la volontà era di preservare il sito web già esistente,
-                        prodotto con WordPress.
-                        A causa della grave lentezza del portale, in accordo con l'Avvocato Natati, si è deciso di
-                        produrre
-                        il sito web da 0, migrando il più possibile dalla precedente istanza (post, media, contenuti
-                        vari).
+                        <strong>Context</strong>: Initially, the intention was to preserve the existing website,
+                        produced with WordPress.
+                        Due to the severe slowness of the portal, in agreement with Lawyer Natati, it was decided to
+                        produce
+                        the website from scratch, migrating as much as possible from the previous instance (posts,
+                        media, various contents).
                         <br>
-                        Il sito è stato costruito con un approccio tutto sommato agile, con frequenti colloqui con la
-                        committente per valutare cambi nei requisiti e modifiche al prodotto prima del deployment.
-                        <br> In prima istanza, i vari CRUD erano stati scritti da zero, tuttavia questo backend è stato
-                        poi
-                        sostituito con un admin panel scritto usando Filament: questa scelta, oltre a migliorare aspetti
-                        legati
-                        all'usabilità, ha permesso di migliorare sensibilmente il rilascio di feature aggiuntive.
+                        The site was built with a relatively agile approach, with frequent meetings with the client to
+                        assess changes in requirements and modifications to the product before deployment.
+                        <br> Initially, the various CRUD operations were written from scratch, but this backend was
+                        later
+                        replaced with an admin panel written using Filament: this choice, besides improving usability
+                        aspects, allowed for a significant improvement in the release of additional features.
                     </p>
+
 
                     <p><strong>Stack</strong>: Laravel, Blade, Filament, SQLite, Bootstrap 4</p>
                     <p><strong>Hosting</strong>: Owner's Aruba shared hosting service.</p>
@@ -64,22 +64,24 @@
                     <h3 id="blog---jul-2024">My very own blog: gandomullac.dev - Feb 2023<a class="anchor"
                             href="#blog---jul-2024">#</a></h3>
                     <p>Visit the project at, well, you already are visiting it.</p>
-                    <p><strong>Objective</strong>: Pubblicare un portfolio sufficientemente carino</p>
+                    <p><strong>Objective</strong>: Publish a half decent portfolio</p>
                     <p>
-                        <strong>Context</strong>: Il mio precedente "blog" era un file html con una lista di progetti
-                        scritta in 5 minuti. La volontà era scrivermi un portfolio per flexare doti da sviluppatore
-                        quando invece da4 anni lavoro come sistemista, e allo stesso tempo affinare le mie doti con
+                        <strong>Context</strong>: My previous "blog" was an HTML file with a list of projects
+                        written in 5 minutes. The intention was to write a portfolio to showcase my developer skills
+                        even though I've been working as a systems administrator for 4 years, and at the same time
+                        refine my skills with
                         Laravel,
-                        CI CD e con soluzioni di hosting serverless e gratuite.
+                        CI CD, and with serverless and free hosting solutions.
 
                         <br>
-                        La precedente istanza, hostata presso Hetzner, aveva il vantaggio che mi permetteva di fornire
-                        un ambiente di test ai clienti attraverso un dominio di terzo livello: questa funzionalità sarà
-                        sostituita dal servizio offerto da <a href="https://expose.dev/">Expose</a>.
+                        The previous instance, hosted on Hetzner, had the advantage of allowing me to provide
+                        a testing environment for clients through a third-level domain: this functionality will be
+                        replaced by the service offered by <a href="https://expose.dev/">Expose</a>.
                     </p>
 
+
                     <p><strong>Stack</strong>: Laravel, Blade, Filament, SQLite, plain CSS & JS</p>
-                    <p><strong>Hosting</strong>: Cloudflare pages</p>
+                    <p><strong>Hosting</strong>: Cloudflare pages ASAP, right now Hetzner's shared hosting</p>
                 </div>
 
             </article>
@@ -102,7 +104,7 @@
             </div> --}}
 
 
-            <x-footer/>
+            <x-footer />
 
         </div>
     </div>
