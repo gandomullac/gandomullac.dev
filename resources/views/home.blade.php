@@ -18,7 +18,8 @@
 
 
 
-        <span class="handle">@gandomullac</span>
+        <span class="handle">System administrator <span style="color:red">|</span> WebDev</span>
+        {{-- <span class="handle">@gandomullac</span> --}}
 
         <h2>
             Test Driven <span class="fancy-underline">Developer</span>
@@ -91,7 +92,7 @@
             };
 
             var typed = new Typed("#typed-output", options);
-        }, 2500); // Attendi 3 secondi prima di iniziare Typed.js
+        }, 2500); // Attendi 2.5 secondi prima di avviare Typed.js
     });
 </script>
 @endsection
