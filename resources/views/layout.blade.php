@@ -60,7 +60,7 @@
 
     @php
         $navigationLinks = [
-        // ['label' => 'about', 'route' => 'about'],
+        ['label' => 'about', 'route' => 'about'],
         // ['label' => 'blog', 'route' => 'blog'],
         // ['label' => 'consulting', 'route' => 'consulting'],
         ['label' => 'home', 'route' => 'home'],
