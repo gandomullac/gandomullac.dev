@@ -1,0 +1,136 @@
+/* Custom */
+
+
+.splash-container {
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px
+}
+
+.splash-container {
+    font-size: 18px
+}
+
+
+@media screen and (min-width:800px) {
+    .splash-container {
+        margin-left: 200px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .splash-container {
+        margin-left: 300px;
+    }
+}
+
+
+@media screen and (min-width:1400px) {
+    .splash-container {
+        margin-left: 400px;
+    }
+}
+
+
+.splash h1 {
+    font-size: 2.1em;
+    line-height: 1;
+    letter-spacing: -.03em;
+    margin: 0
+}
+
+.splash h2 {
+    font-size: 1.7em;
+    font-weight: 500;
+    line-height: 1.25;
+    max-width: 22em;
+    letter-spacing: -.03em
+}
+
+.fancy {
+    color: #9013fe
+}
+
+.handle {
+    display: inline-block;
+    margin-top: .275em;
+    color: #9b9b9b;
+    letter-spacing: .5px
+}
+
+.writing {
+    text-decoration: none;
+    color: #9013fe
+}
+
+main {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%
+}
+
+.social-icons {
+    justify-content: flex-start;
+    padding-top: 1rem;
+    margin-left: -.8rem
+}
+
+
+#typed-output {
+    white-space: nowrap;
+    /* Impedisce il wrapping del testo */
+    display: inline-block;
+    /* Mantiene il cursore sulla stessa linea */
+    max-width: 100%;
+    /* Assicura che il contenitore non sia troppo largo */
+    box-sizing: border-box;
+    /* Considera il bordo nella larghezza */
+
+    overflow-wrap: break-word !important;
+    /* Gestisce il comportamento di andare a capo del testo */
+    word-wrap: break-word !important;
+    /* Gestisce il comportamento di andare a capo del testo per browser più vecchi */
+
+
+    word-break: break-word;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* Stili personalizzati per gli span generati da Typed.js */
+.typed-cursor {
+    color: red;
+    font-size: 2.em;
+    animation: blink 0.7s infinite;
+    opacity: 1;
+}
+
+.typed-text {
+    color: blue;
+    /* Colore del testo */
+    font-weight: bold;
+    /* Peso del carattere */
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.fancy-underline {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+

@@ -23,7 +23,7 @@
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}" />
 
-    <x-styles />
+    <x-styles/>
 
     <link rel="alternate" type="application/rss+xml+xml" href="{{ env('APP_URL') }}"
         title="gandomullac.dev" />
@@ -44,8 +44,7 @@
     </script>
 
 
-    <blade
-        vite|(%5B%26%2339%3Bresources%2Fcss%2Fapp.css%26%2339%3B%2C%20%26%2339%3Bresources%2Fjs%2Fapp.js%26%2339%3B%5D)>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
@@ -66,7 +65,7 @@
         // ['label' => 'consulting', 'route' => 'consulting'],
         ['label' => 'home', 'route' => 'home'],
         // ['label' => 'learning', 'route' => 'learning'],
-        // ['label' => 'projects', 'route' => 'projects'],
+        ['label' => 'projects', 'route' => 'projects'],
         // ['label' => 'uses', 'route' => 'uses'],
         ];
     @endphp
@@ -82,8 +81,7 @@
     </main>
 
 
-    @include('scripts')
-
+    <x-scripts/>
 </body>
 
 </html>

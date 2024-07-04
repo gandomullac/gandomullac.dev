@@ -8,7 +8,7 @@ $pages = [
     // 'blog' => 'blog',
     // 'consulting' => 'consulting',
     // 'learning' => 'learning',
-    // 'projects' => 'projects',
+    'projects' => 'projects',
     // 'uses' => 'uses',
 ];
 
