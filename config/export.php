@@ -28,12 +28,15 @@ return [
     ],
 
     /*
-     * File patterns that should be excluded from the included files.
-     */
+    * File patterns that should be excluded from the included files.
+    */
     'exclude_file_patterns' => [
         '/\.php$/',
         '/mix-manifest\.json$/',
+        '/^public\/js\//',
+        '/^public\/css\//',
     ],
+
 
     /*
      * Whether or not the destination folder should be emptied before starting

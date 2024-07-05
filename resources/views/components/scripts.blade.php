@@ -1,3 +1,3 @@
-<script src="{{ asset('js/js.js') }}"></script>
+@vite('resources/js/burger.js')
 
 @stack('scripts')

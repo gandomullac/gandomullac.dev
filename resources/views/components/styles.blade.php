@@ -1,3 +1,3 @@
-<link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}" />
+@vite('resources/css/app.css')
 
 @stack('styles')

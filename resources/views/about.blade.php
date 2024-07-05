@@ -1,13 +1,7 @@
 @extends('layout')
 
 @push('styles')
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/projects.css') }}" />
-@endpush
-
-@push('scripts')
-    {{-- <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
-    <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js" data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script> --}}
-    <script src="{{ asset('js/table-of-contents.js') }}"></script>
+    @vite('resources/css/projects.css')
 @endpush
 
 @section('content')

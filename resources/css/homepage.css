@@ -103,8 +103,8 @@ main {
 
 /* Stili personalizzati per gli span generati da Typed.js */
 .typed-cursor {
-    color: var(--main);;
-    font-size: 2.em;
+    color: var(--main);
+    font-size: 1em;
     animation: blink 0.7s infinite;
     opacity: 1;
 }
