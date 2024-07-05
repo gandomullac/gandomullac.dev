@@ -21,6 +21,7 @@ foreach ($pages as $uri => $view) {
 
 Route::get('/curriculum_it', function () {
     $filePath = public_path('/pdf/CV_3.5_italian.pdf');
+
     return response()->file($filePath);
 })->name('cv');
 
@@ -29,4 +30,3 @@ Route::get('/projects', function () {
 
     return view('projects', compact('projects'));
 })->name('projects');
-

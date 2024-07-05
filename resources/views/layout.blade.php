@@ -23,10 +23,9 @@
 
     <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}" />
 
-    <x-styles/>
+    <x-styles />
 
-    <link rel="alternate" type="application/rss+xml+xml" href="{{ env('APP_URL') }}"
-        title="gandomullac.dev" />
+    <link rel="alternate" type="application/rss+xml+xml" href="{{ env('APP_URL') }}" title="gandomullac.dev" />
 
     <script type="application/ld+json">
         {
@@ -60,13 +59,13 @@
 
     @php
         $navigationLinks = [
-        ['label' => 'about', 'route' => 'about'],
-        // ['label' => 'blog', 'route' => 'blog'],
-        // ['label' => 'consulting', 'route' => 'consulting'],
-        ['label' => 'home', 'route' => 'home'],
-        // ['label' => 'learning', 'route' => 'learning'],
-        ['label' => 'projects', 'route' => 'projects'],
-        // ['label' => 'uses', 'route' => 'uses'],
+            ['label' => 'about', 'route' => 'about'],
+            // ['label' => 'blog', 'route' => 'blog'],
+            // ['label' => 'consulting', 'route' => 'consulting'],
+            ['label' => 'home', 'route' => 'home'],
+            // ['label' => 'learning', 'route' => 'learning'],
+            ['label' => 'projects', 'route' => 'projects'],
+            // ['label' => 'uses', 'route' => 'uses'],
         ];
     @endphp
 
@@ -81,7 +80,7 @@
     </main>
 
 
-    <x-scripts/>
+    <x-scripts />
 </body>
 
 </html>

@@ -11,53 +11,49 @@
 @endpush
 
 @section('content')
+    <div class="flex-wrapper">
+        <div class="post__container">
+            <div class="post">
+                <header class="post__header">
+                    <h1 id="post__title">Projects</h1>
 
-<div class="flex-wrapper">
-    <div class="post__container">
-        <div class="post">
-            <header class="post__header">
-                <h1 id="post__title">Projects</h1>
+                </header>
+                <article class="post__content">
 
-            </header>
-            <article class="post__content">
+                    <p>Here are some the projects I worked on. I got a little better over time, so manage your expectations.
+                    </p>
 
-                <p>Here are some the projects I worked on. I got a little better over time, so manage your expectations.
-                </p>
+                    <h2 id="commercial-projects">Commercial Projects<a class="anchor" href="#commercial-projects">#</a></h2>
 
-                <h2 id="commercial-projects">Commercial Projects<a class="anchor" href="#commercial-projects">#</a></h2>
+                    @foreach ($projects->where('category', 1) as $project)
+                        <div>
 
-                @foreach ($projects->where('category', 1) as $project)
+                            <h3 id="{{ $project->slug }}">{{ $project->title }}<a class="anchor"
+                                    href="#{{ $project->slug }}">#</a></h3>
 
-                    <div>
+                            {!! $project->description !!}
 
-                        <h3 id="{{ $project->slug }}">My very own blog: gandomullac.dev - Feb 2023<a class="anchor"
-                            href="#{{ $project->slug }}">#</a></h3>
+                        </div>
+                    @endforeach
 
-                        {!! $project->description !!}
+                    <h2 id="open-source-projects">Learning / Open Source Projects<a class="anchor"
+                            href="#open-source-projects">#</a></h2>
 
-                    </div>
+                    @foreach ($projects->where('category', 2) as $project)
+                        <div>
 
-                @endforeach
+                            <h3 id="{{ $project->slug }}">{{ $project->title }}<a class="anchor"
+                                    href="#{{ $project->slug }}">#</a></h3>
 
-                <h2 id="open-source-projects">Learning / Open Source Projects<a class="anchor" href="#open-source-projects">#</a></h2>
+                            {!! $project->description !!}
 
-                @foreach ($projects->where('category', 2) as $project)
+                        </div>
+                    @endforeach
 
-                    <div>
-
-                        <h3 id="{{ $project->slug }}">My very own blog: gandomullac.dev - Feb 2023<a class="anchor"
-                            href="#{{ $project->slug }}">#</a></h3>
-
-                        {!! $project->description !!}
-
-                    </div>
-
-                @endforeach
-
-            </article>
+                </article>
 
 
-            {{-- <div class="pagination">
+                {{-- <div class="pagination">
 
                 <a class="pagination__item" href="/uses/">
                     <span class="pagination__label">Previous Post</span>
@@ -74,39 +70,34 @@
             </div> --}}
 
 
-            <x-footer />
+                <x-footer />
 
+            </div>
         </div>
+
+        <div class="toc-container">
+            <div class="toc-post-title">Projects</div>
+            <nav id="TableOfContents">
+                <ul>
+                    <li><a href="#commercial-projects" class="active">Commercial Projects</a>
+                        <ul>
+
+                            @foreach ($projects->where('category', 1) as $project)
+                                <li><a href="#{{ $project->slug }}" class="active">{{ $project->subtitle }}</a></li>
+                            @endforeach
+
+                        </ul>
+                    </li>
+                    <li><a href="#open-source-projects" class="">Learning / Open Source Projects</a>
+                        <ul>
+                            @foreach ($projects->where('category', 2) as $project)
+                                <li><a href="#{{ $project->slug }}" class="active">{{ $project->subtitle }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </div>
-
-    <div class="toc-container">
-        <div class="toc-post-title">Projects</div>
-        <nav id="TableOfContents">
-            <ul>
-                <li><a href="#commercial-projects" class="active">Commercial Projects</a>
-                    <ul>
-
-                        @foreach ($projects->where('category', 1) as $project)
-
-                            <li><a href="#{{ $project->slug }}" class="active">{{ $project->subtitle }}</a></li>
-
-                        @endforeach
-
-                    </ul>
-                </li>
-                <li><a href="#open-source-projects" class="">Learning / Open Source Projects</a>
-                    <ul>
-                        @foreach ($projects->where('category', 2) as $project)
-
-                            <li><a href="#{{ $project->slug }}" class="active">{{ $project->subtitle }}</a></li>
-
-                        @endforeach
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-</div>
-
 @endsection

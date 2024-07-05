@@ -3,23 +3,18 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
-use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
-use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Group;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\Group;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\RichEditor;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\DatePicker;
-
+use Filament\Tables\Table;
 
 class ProjectResource extends Resource
 {
@@ -31,7 +26,6 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
-
 
                 Group::make()->schema([
                     Section::make(__('blog.contents'))->schema([
@@ -94,10 +88,10 @@ class ProjectResource extends Resource
 
                 TextColumn::make('date')
                     ->label(__('blog.date'))
-                    ->dateTime('M Y')
+                    ->dateTime('M Y'),
             ])
             ->filters([
-                //
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -112,7 +106,7 @@ class ProjectResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+
         ];
     }
 
