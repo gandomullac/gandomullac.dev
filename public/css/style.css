@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+    --main: red
+}
+
 button,
 button[type=button],
 button[type=reset],
@@ -324,14 +328,14 @@ abbr[title] {
 
 .nav__list a.active {
     /* color: #111 */
-    color: red;
+    color: var(--main);;
     transition: color 0.2s ease;
 
 }
 
 .nav__list a:hover {
     /* color: #111 */
-    color: red;
+    color: var(--main);;
     transition: color 0.2s ease;
 }
 
@@ -480,7 +484,7 @@ main {
 /* custom */
 
 p a {
-    color: red
+    color: var(--main);
 }
 
 .social-icons__link svg {
@@ -490,11 +494,11 @@ p a {
 }
 
 .social-icons__link:hover svg {
-    color: red;
+    color: var(--main);;
     transition: color 0.2s ease;
 }
 
 .social-icons__link:active svg {
-    color: red;
+    color: var(--main);;
     transition: color 0.2s ease;
 }

@@ -103,7 +103,7 @@ main {
 
 /* Stili personalizzati per gli span generati da Typed.js */
 .typed-cursor {
-    color: red;
+    color: var(--main);;
     font-size: 2.em;
     animation: blink 0.7s infinite;
     opacity: 1;
@@ -130,7 +130,11 @@ main {
 
 .fancy-underline {
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color: var(--main);;
+}
+
+.fancy {
+    color: var(--main);
 }
 
 

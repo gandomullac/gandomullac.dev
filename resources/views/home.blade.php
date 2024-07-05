@@ -17,7 +17,7 @@
 
 
 
-            <span class="handle">System administrator <span style="color:red">|</span> WebDev</span>
+            <span class="handle">System administrator <span class="fancy">|</span> WebDev</span>
             {{-- <span class="handle">@gandomullac</span> --}}
 
             <h2>
