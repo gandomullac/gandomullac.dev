@@ -19,7 +19,7 @@ foreach ($pages as $uri => $view) {
     })->name($view);
 }
 
-Route::get('/curriculum', function () {
+Route::get('/curriculum_it', function () {
     $filePath = public_path('/pdf/CV_3.5_italian.pdf');
     return response()->file($filePath);
 })->name('cv');

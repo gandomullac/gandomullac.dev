@@ -56,6 +56,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'before' => [
+        'sitemap' => 'php artisan sitemap:generate',
         // 'assets' => '/usr/local/bin/yarn production',
     ],
 
