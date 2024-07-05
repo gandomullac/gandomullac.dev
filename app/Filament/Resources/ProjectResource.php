@@ -60,7 +60,7 @@ class ProjectResource extends Resource
                             ->required(),
 
                         RichEditor::make('description')
-                            ->label(__('blog.content'))
+                            ->label(__('blog.body'))
                             ->required(),
                     ]),
 
