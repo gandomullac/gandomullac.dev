@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Claude",
                 "Clod",
                 "Clœd",
+                "Cløëd",
                 "Clöd",
                 "Cloddo",
                 "Cloddoman",
