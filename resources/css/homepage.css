@@ -56,7 +56,7 @@
 .handle {
     display: inline-block;
     margin-top: .275em;
-    color: #9b9b9b;
+    color: var(--secondary);
     letter-spacing: .5px
 }
 

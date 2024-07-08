@@ -98,7 +98,7 @@ code[class*=language-],pre[class*=language-] {
     text-decoration: none;
     position: absolute;
     left: -1rem;
-    color: #9b9b9b;
+    color: var(--secondary);
     font-size: 1.2rem;
     font-weight: 400
 }
@@ -131,7 +131,7 @@ code[class*=language-],pre[class*=language-] {
 }
 
 .post__date {
-    color: #9b9b9b;
+    color: var(--secondary);
     font-size: .8rem
 }
 
@@ -164,7 +164,7 @@ code[class*=language-],pre[class*=language-] {
 
 #TableOfContents a {
     text-decoration: none;
-    color: #9b9b9b;
+    color: var(--secondary);
     font-size: .9rem
 }
 
@@ -255,7 +255,7 @@ code[class*=language-],pre[class*=language-] {
 }
 
 .pagination__label {
-    color: #9b9b9b;
+    color: var(--secondary);
     font-size: .8rem
 }
 
@@ -273,7 +273,7 @@ footer {
 
 footer p {
     margin-top: 1rem;
-    color: #9b9b9b;
+    color: var(--secondary);
     font-size: .65rem
 }
 
