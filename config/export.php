@@ -29,13 +29,13 @@ return [
      * By default your `public` folder's contents will be added to the export.
      */
     'include_files' => [
-        // 'public/pdf' => 'pdf',
-        // 'public/svg' => 'svg',
-        // 'public/.htaccess' => '',
-        // 'public/favicon.png' => '',
-        // 'public/robots.txt' => '',
-        // 'public/sitemap.xml' => '',
-        'public' => '',
+        'public/svg' => 'svg',
+        'public/.htaccess' => '.htaccess',
+        'public/favicon.png' => 'favicon.png',
+        'public/robots.txt' => 'robots.txt',
+        'public/sitemap.xml' => 'sitemap.xml',
+        'public/build' => 'build',
+        // 'public' => '',
         'storage\app\public\curriculum' => 'storage\curriculum',
     ],
 
@@ -45,9 +45,8 @@ return [
     'exclude_file_patterns' => [
         '/\.php$/',
         '/mix-manifest\.json$/',
-        '/^public\/js\//',
-        '/^public\/css\//',
     ],
+
 
     /*
      * Whether or not the destination folder should be emptied before starting

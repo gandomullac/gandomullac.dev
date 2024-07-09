@@ -46,7 +46,7 @@
 
 <body>
     <div class="burger__container">
-        <div class="burger" aria-controls="navigation" aria-label="Menu">
+        <div class="burger">
             <div class="burger__meat burger__meat--1"></div>
             <div class="burger__meat burger__meat--2"></div>
             <div class="burger__meat burger__meat--3"></div>
