@@ -12,4 +12,5 @@ return [
     'language' => 'Language',
     'upload' => 'Upload',
     'url' => 'URL',
+    'sort' => 'Sort'
 ];

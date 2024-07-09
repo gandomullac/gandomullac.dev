@@ -20,7 +20,7 @@ class CurriculumResource extends Resource
 {
     protected static ?string $model = Curriculum::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-link';
+    protected static ?string $navigationIcon = 'heroicon-o-academic-cap';
 
     public static function form(Form $form): Form
     {
@@ -75,7 +75,7 @@ class CurriculumResource extends Resource
 
                 IconColumn::make('url')
                     ->label(__('blog.url'))
-                    ->icon('heroicon-o-rectangle-stack')
+                    ->icon('heroicon-o-link')
                     // Link ad uso interno.
                     ->url(fn ($record) => $record->getFirstMedia('curriculum')->getUrl())
                     ->openUrlInNewTab(),
