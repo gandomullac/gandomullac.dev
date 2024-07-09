@@ -1,11 +1,12 @@
 <?php
 
+use App\Models\Curriculum;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 $pages = [
     'home' => 'home',
-    'about' => 'about',
+    // 'about' => 'about',
     // 'blog' => 'blog',
     // 'consulting' => 'consulting',
     // 'learning' => 'learning',
@@ -20,13 +21,21 @@ foreach ($pages as $uri => $view) {
 }
 
 Route::get('/curriculum_it', function () {
-    $filePath = public_path('/pdf/CV_3.5_italian.pdf');
+
+    $cv = Curriculum::whereLanguage('it')->sole();
+    $filePath = $cv->getFirstMedia('curriculum')->getPath();
 
     return response()->file($filePath);
-})->name('cv');
+})->name('curriculum_it');
 
 Route::get('/projects', function () {
     $projects = Project::all();
 
     return view('projects', compact('projects'));
 })->name('projects');
+
+Route::get('/about', function () {
+    $curricula = Curriculum::all();
+
+    return view('about', compact('curricula'));
+})->name('about');

@@ -6,7 +6,7 @@ return [
      * If true, the exporter will crawl through your site's pages to determine
      * the paths that need to be exported.
      */
-    'crawl' => true,
+    'crawl' => false,
 
     /*
      * Add additional paths to be added to the export here. If you're using the
@@ -14,7 +14,12 @@ return [
      *
      * For example: "about", "posts/featured"
      */
-    'paths' => [],
+    'paths' => [
+        '/',
+        '/about',
+        'projects',
+        // '/curriculum_it'
+    ],
 
     /*
      * Files and folders that should be included in the build. Expects
@@ -24,7 +29,14 @@ return [
      * By default your `public` folder's contents will be added to the export.
      */
     'include_files' => [
+        // 'public/pdf' => 'pdf',
+        // 'public/svg' => 'svg',
+        // 'public/.htaccess' => '',
+        // 'public/favicon.png' => '',
+        // 'public/robots.txt' => '',
+        // 'public/sitemap.xml' => '',
         'public' => '',
+        'storage\app\public\curriculum' => 'storage\curriculum',
     ],
 
     /*
@@ -36,7 +48,6 @@ return [
         '/^public\/js\//',
         '/^public\/css\//',
     ],
-
 
     /*
      * Whether or not the destination folder should be emptied before starting
@@ -59,7 +70,11 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'before' => [
+        'build' => 'npm run build',
         'sitemap' => 'php artisan sitemap:generate',
+        'restore-link' => 'php artisan storage:link',
+        'storage-unlink' => 'php artisan storage:unlink',
+        'delete-link' => 'rmdir public\storage',
         // 'assets' => '/usr/local/bin/yarn production',
     ],
 
@@ -70,6 +85,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'after' => [
+        'restore-link' => 'php artisan storage:link',
         // 'deploy' => '/usr/local/bin/netlify deploy --prod',
     ],
 

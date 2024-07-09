@@ -8,5 +8,8 @@ return [
     'category' => 'Category',
     'date' => 'Date',
     'body' => 'Body',
-
+    'name' => 'Name',
+    'language' => 'Language',
+    'upload' => 'Upload',
+    'url' => 'URL',
 ];

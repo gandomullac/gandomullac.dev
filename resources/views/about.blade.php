@@ -30,10 +30,17 @@
                         <li>Gym, beach tennis, music and everything tech.</li>
                     </ul>
 
-                    <h2 id="work-experiences">Curriculum Vitae<a class="anchor" href="#work-experiences">#</a></h2>
-                    <p>Are you hiring? Here you'll find everything you need.</p>
+                    @isset($curricula)
+                        <h2 id="work-experiences">Curriculum Vitae<a class="anchor" href="#work-experiences">#</a></h2>
+                        <p>Are you hiring? Here you'll find everything you need.</p>
 
-                    <p><a href="{{ route('cv') }}">CV Claudio Gandini 3.5 (Italian)</a></p>
+
+                        @foreach ($curricula as $cv)
+                            <p>
+                                <a href="{{ asset($cv->getFirstMedia('curriculum')->getUrl()) }}">{{ $cv->name }}</a>
+                            </p>
+                        @endforeach
+                    @endisset
 
                 </article>
 
