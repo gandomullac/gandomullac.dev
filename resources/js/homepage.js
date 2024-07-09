@@ -6,32 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
         return Math.floor(Math.random() * variance) + base;
     }
 
+    // Recupera i nickname dalla variabile globale
+    var nicknames = window['nicknames'];
+
     // Mostra la prima scritta e aspetta 3 secondi
     setTimeout(function () {
         var options = {
-            strings: [
-                "Gando",
-                "Claude",
-                "Clod",
-                "Clœd",
-                "Cløëd",
-                "Clöd",
-                "Cloddo",
-                "Cloddoman",
-                "CL",
-                "Super",
-                "S.",
-                "Super Clod",
-                "Suuupah",
-                "KRAUT",
-                "Ganz",
-                "Ganzerker",
-                "Callum",
-                "Mullac",
-                "CLOOOOOOOOD",
-                "Gando McCallum",
-                "Claudio Gandini",
-            ],
+            strings: nicknames,
             typeSpeed: 70,
             backSpeed: 50,
             backDelay: 2000,

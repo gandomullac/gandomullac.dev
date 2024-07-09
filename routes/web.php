@@ -1,32 +1,21 @@
 <?php
 
 use App\Models\Curriculum;
+use App\Models\Nickname;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
-$pages = [
-    'home' => 'home',
-    // 'about' => 'about',
-    // 'blog' => 'blog',
-    // 'consulting' => 'consulting',
-    // 'learning' => 'learning',
-    // 'projects' => 'projects',
-    // 'uses' => 'uses',
-];
 
-foreach ($pages as $uri => $view) {
-    Route::get($uri === 'home' ? '/' : $uri, function () use ($view) {
-        return view($view);
-    })->name($view);
-}
+Route::get('/', function () {
+    $nicknames = Nickname::query()
+        ->orderBy('sort')
+        ->get()
+        ->pluck('name')
+        ->toArray();
 
-Route::get('/curriculum_it', function () {
+    return view('home', compact('nicknames'));
+})->name('home');
 
-    $cv = Curriculum::whereLanguage('it')->sole();
-    $filePath = $cv->getFirstMedia('curriculum')->getPath();
-
-    return response()->file($filePath);
-})->name('curriculum_it');
 
 Route::get('/projects', function () {
     $projects = Project::all();

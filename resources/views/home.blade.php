@@ -5,6 +5,8 @@
 @endPush
 
 @push('scripts')
+    @javascript('nicknames', $nicknames)
+
     @vite('resources/js/homepage.js')
 @endpush
 
