@@ -37,7 +37,7 @@
 
                         @foreach ($curricula as $cv)
                             <p>
-                                <a href="{{ asset($cv->getFirstMedia('curriculum')->getUrl()) }}">{{ $cv->name }}</a>
+                                <a href="{{ $cv->url }}">{{ $cv->nameWithLanguage }}</a>
                             </p>
                         @endforeach
                     @endisset

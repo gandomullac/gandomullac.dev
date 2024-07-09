@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Support\Str;
 
 class Curriculum extends Model implements HasMedia
 {
@@ -23,12 +24,13 @@ class Curriculum extends Model implements HasMedia
         $this->addMediaCollection('curriculum');
     }
 
-    public function getRouteAttribute(): string
+    public function getNameWithLanguageAttribute(): string
     {
-        if ($this->language === 'it') {
-            return 'curriculum_it';
-        }
+        return "[" . Str::upper($this->language) . "] $this->name";
+    }
 
-        return 'curriculum_en';
+    public function getUrlAttribute(): string
+    {
+        return asset($this->getFirstMedia('curriculum')->getUrl());
     }
 }
