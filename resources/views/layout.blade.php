@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-    <title>gandomullac.dev</title>
+    <title>{{ env('APP_NAME') }}</title>
 
     <meta charset="UTF-8">
     <meta name="language" content="en">
@@ -31,13 +31,13 @@
         {
             "@context": "http://schema.org",
             "@type": "WebSite",
-            "url": "https:\/\/www.gandomullac.dev\/",
+            "url": "https:\/\/www.gandomullac.com\/",
             "name": "",
             "author": {
                 "@type": "Person",
-                "name": ""
+                "name": "gandomullac"
             },
-            "description": ""
+            "description": "gandomullac's portfolio"
         }
 
     </script>
