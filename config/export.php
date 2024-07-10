@@ -47,7 +47,6 @@ return [
         '/mix-manifest\.json$/',
     ],
 
-
     /*
      * Whether or not the destination folder should be emptied before starting
      * the export.
@@ -69,6 +68,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'before' => [
+        'pest' => 'php artisan test --bail',
         'build' => 'npm run build',
         'sitemap' => 'php artisan sitemap:generate',
         'restore-link' => 'php artisan storage:link',

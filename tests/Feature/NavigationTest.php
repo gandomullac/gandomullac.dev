@@ -2,11 +2,8 @@
 
 $pages = [
     'home' => 'home',
-    // 'about' => 'about',
-    // 'blog' => 'blog',
-    // 'consulting' => 'consulting',
-    // 'learning' => 'learning',
-    // 'projects' => 'projects',
+    'about' => 'about',
+    'projects' => 'projects',
 ];
 
 foreach ($pages as $name => $route) {
