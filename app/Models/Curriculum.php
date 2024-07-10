@@ -18,7 +18,6 @@ class Curriculum extends Model implements HasMedia
         'language',
     ];
 
-    // media library configuration
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('curriculum');
@@ -26,7 +25,7 @@ class Curriculum extends Model implements HasMedia
 
     public function getNameWithLanguageAttribute(): string
     {
-        return '[' . Str::upper($this->language) . '] ' . $this->name;
+        return '['.Str::upper($this->language).'] '.$this->name;
     }
 
     public function getUrlAttribute(): string

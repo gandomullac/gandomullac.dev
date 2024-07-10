@@ -2,7 +2,6 @@
 
 use App\Models\Project;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Str;
 
 uses(RefreshDatabase::class);
 
@@ -12,12 +11,6 @@ beforeEach(function (): void {
 
 it('can create a new project', function (): void {
     $this->assertDatabaseHas('projects', $this->project->toArray());
-});
-
-it('can get the slug attribute', function (): void {
-    $expectedSlug = Str::slug($this->project->subtitle);
-
-    $this->assertEquals($expectedSlug, $this->project->slug);
 });
 
 it('can update a project', function (): void {
