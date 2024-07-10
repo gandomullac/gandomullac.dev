@@ -2,15 +2,15 @@
 
 use App\Models\Nickname;
 
-beforeEach(function () {
+beforeEach(function (): void {
     $this->nickname = Nickname::factory()->create();
 });
 
-it('can create a new nickname', function () {
+it('can create a new nickname', function (): void {
     $this->assertDatabaseHas('nicknames', $this->nickname->toArray());
 });
 
-it('can update a nickname', function () {
+it('can update a nickname', function (): void {
     $newData = [
         'name' => 'NewNickname',
         'sort' => 50,
@@ -21,7 +21,7 @@ it('can update a nickname', function () {
     $this->assertDatabaseHas('nicknames', $newData);
 });
 
-it('can delete a nickname', function () {
+it('can delete a nickname', function (): void {
     $this->nickname->delete();
 
     $this->assertDatabaseMissing('nicknames', $this->nickname->toArray());

@@ -6,16 +6,13 @@ use Illuminate\View\Component;
 
 class SocialIcon extends Component
 {
-    public $links;
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($links)
+    public function __construct(public $links)
     {
-        $this->links = $links;
     }
 
     /**

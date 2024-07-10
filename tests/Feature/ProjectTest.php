@@ -6,21 +6,21 @@ use Illuminate\Support\Str;
 
 uses(RefreshDatabase::class);
 
-beforeEach(function () {
+beforeEach(function (): void {
     $this->project = Project::factory()->create();
 });
 
-it('can create a new project', function () {
+it('can create a new project', function (): void {
     $this->assertDatabaseHas('projects', $this->project->toArray());
 });
 
-it('can get the slug attribute', function () {
+it('can get the slug attribute', function (): void {
     $expectedSlug = Str::slug($this->project->subtitle);
 
     $this->assertEquals($expectedSlug, $this->project->slug);
 });
 
-it('can update a project', function () {
+it('can update a project', function (): void {
     $newData = [
         'title' => 'New Title',
         'subtitle' => 'New Subtitle',
@@ -34,7 +34,7 @@ it('can update a project', function () {
     $this->assertDatabaseHas('projects', $newData);
 });
 
-it('can delete a project', function () {
+it('can delete a project', function (): void {
     $this->project->delete();
 
     $this->assertDatabaseMissing('projects', $this->project->toArray());

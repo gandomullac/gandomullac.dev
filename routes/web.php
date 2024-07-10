@@ -5,7 +5,6 @@ use App\Models\Nickname;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
-
 Route::get('/', function () {
     $nicknames = Nickname::query()
         ->orderBy('sort')
@@ -13,18 +12,17 @@ Route::get('/', function () {
         ->pluck('name')
         ->toArray();
 
-    return view('home', compact('nicknames'));
+    return view('home', ['nicknames' => $nicknames]);
 })->name('home');
-
 
 Route::get('/projects', function () {
     $projects = Project::all();
 
-    return view('projects', compact('projects'));
+    return view('projects', ['projects' => $projects]);
 })->name('projects');
 
 Route::get('/about', function () {
     $curricula = Curriculum::all();
 
-    return view('about', compact('curricula'));
+    return view('about', ['curricula' => $curricula]);
 })->name('about');

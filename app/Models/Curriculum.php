@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Illuminate\Support\Str;
 
 class Curriculum extends Model implements HasMedia
 {
@@ -26,7 +26,7 @@ class Curriculum extends Model implements HasMedia
 
     public function getNameWithLanguageAttribute(): string
     {
-        return "[" . Str::upper($this->language) . "] $this->name";
+        return '[' . Str::upper($this->language) . '] ' . $this->name;
     }
 
     public function getUrlAttribute(): string

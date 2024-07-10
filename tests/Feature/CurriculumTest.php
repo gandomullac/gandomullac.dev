@@ -5,7 +5,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-beforeEach(function () {
+beforeEach(function (): void {
     Storage::fake('public');
 
     $this->curriculum = Curriculum::factory()->create();
@@ -16,22 +16,22 @@ beforeEach(function () {
     );
 });
 
-it('can create a new curriculum', function () {
+it('can create a new curriculum', function (): void {
     $this->assertDatabaseHas('curricula', $this->curriculum->toArray());
 });
 
-it('can attach a file to a curriculum', function () {
+it('can attach a file to a curriculum', function (): void {
     $this->curriculum->addMedia($this->pdf)->toMediaCollection('curriculum');
     $this->assertNotNull($this->curriculum->getFirstMedia('curriculum'));
 });
 
-it('can get the name with language attribute', function () {
+it('can get the name with language attribute', function (): void {
     $expectedString = '['.Str::upper($this->curriculum->language).'] '.$this->curriculum->name;
 
     $this->assertEquals($expectedString, $this->curriculum->name_with_language);
 });
 
-it('can get the url attribute', function () {
+it('can get the url attribute', function (): void {
     $this->curriculum->addMedia($this->pdf)->toMediaCollection('curriculum');
 
     $this->assertStringContainsString('curriculum.pdf', $this->curriculum->url);

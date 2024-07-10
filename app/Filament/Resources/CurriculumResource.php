@@ -82,7 +82,7 @@ class CurriculumResource extends Resource
 
             ])
             ->filters([
-                //
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -98,7 +98,7 @@ class CurriculumResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+
         ];
     }
 
