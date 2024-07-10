@@ -2,7 +2,7 @@
 
 :root {
     --main: #db0000;
-    --secondary: #646464;
+    --secondary: #747474;
 }
 
 button,
@@ -336,7 +336,7 @@ abbr[title] {
 
 .nav__list a:hover {
     /* color: #111 */
-    color: var(--main);;
+    color: var(--main);
     transition: color 0.2s ease;
 }
 
@@ -495,11 +495,11 @@ p a {
 }
 
 .social-icons__link:hover svg {
-    color: var(--main);;
+    color: var(--main);
     transition: color 0.2s ease;
 }
 
 .social-icons__link:active svg {
-    color: var(--main);;
+    color: var(--main);
     transition: color 0.2s ease;
 }

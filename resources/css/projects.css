@@ -104,7 +104,7 @@ code[class*=language-],pre[class*=language-] {
 }
 
 .post h2 .anchor:hover,.post h3 .anchor:hover {
-    color: #717171
+    color: var(--main)
 }
 
 .post blockquote {
@@ -114,7 +114,7 @@ code[class*=language-],pre[class*=language-] {
 }
 
 .post blockquote a {
-    color: #717171;
+    color: var(--secondary);
     text-decoration: underline
 }
 
@@ -169,7 +169,13 @@ code[class*=language-],pre[class*=language-] {
 }
 
 #TableOfContents a.active {
-    color: #333
+    /* color: var(--main); */
+    color: #000;
+}
+
+#TableOfContents a:hover {
+    color: var(--main);
+    /* color: #000; */
 }
 
 .tags__list {
