@@ -21,8 +21,9 @@ class HomePage extends Page
     {
         $browser
             ->assertPathIs($this->url())
-            ->assertSee('Test Driven Developer')
             ->assertSee("Hi, I'm Claudio Gandini")
+            ->assertSee('System administrator | WebDev')
+            ->assertSee('Test Driven Developer')
             ->pause(3000)
             ->assertDontSee("Hi, I'm Claudio Gandini");
     }
