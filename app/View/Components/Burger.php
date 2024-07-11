@@ -6,13 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Styles extends Component
+class Burger extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
+        //
     }
 
     /**
@@ -20,6 +21,6 @@ class Styles extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.styles');
+        return view('components.burger');
     }
 }

@@ -1,3 +1,5 @@
+<x-burger />
+
 <nav class="nav" id="navigation">
     <ul class="nav__list">
         @foreach ($links as $link)

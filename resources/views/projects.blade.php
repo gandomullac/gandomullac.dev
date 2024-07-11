@@ -54,24 +54,6 @@
 
                 </article>
 
-
-                {{-- <div class="pagination">
-
-                <a class="pagination__item" href="/uses/">
-                    <span class="pagination__label">Previous Post</span>
-                    <span class="pagination__title">Uses</span>
-                </a>
-
-
-
-                <a class="pagination__item" href="/learning/">
-                    <span class="pagination__label">Next Post</span>
-                    <span class="pagination__title">My Learnings</span>
-                </a>
-
-            </div> --}}
-
-
                 <x-footer />
 
             </div>

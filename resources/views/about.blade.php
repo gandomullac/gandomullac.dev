@@ -10,8 +10,8 @@
             <div class="post">
                 <header class="post__header">
                     <h1 id="post__title">Hello!</h1>
-
                 </header>
+
                 <article class="post__content">
 
                     <p>My name is Claudio and I'm a techy based in Ferrara</p>
@@ -31,18 +31,7 @@
                         <li>Gym, beach tennis, cycling, music and everything tech.</li>
                     </ul>
 
-                    @isset($curricula)
-                        <h2 id="work-experiences">Curriculum Vitae<a class="anchor" href="#work-experiences">#</a></h2>
-                        <p>Are you hiring? Here you'll find everything you need.</p>
-
-
-                        @foreach ($curricula as $cv)
-                            <p>
-                                <a href="{{ $cv->url }}"
-                                    id="curriculum_{{ $cv->language }}">{{ $cv->nameWithLanguage }}</a>
-                            </p>
-                        @endforeach
-                    @endisset
+                    <x-curricula :curricula="$curricula" />
 
                 </article>
 
