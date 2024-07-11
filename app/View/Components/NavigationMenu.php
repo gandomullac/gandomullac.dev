@@ -11,9 +11,7 @@ class NavigationMenu extends Component
      *
      * @return void
      */
-    public function __construct(public $links)
-    {
-    }
+    public function __construct(public $links) {}
 
     /**
      * Get the view / contents that represent the component.
