@@ -38,7 +38,8 @@
 
                         @foreach ($curricula as $cv)
                             <p>
-                                <a href="{{ $cv->url }}">{{ $cv->nameWithLanguage }}</a>
+                                <a href="{{ $cv->url }}"
+                                    id="curriculum_{{ $cv->language }}">{{ $cv->nameWithLanguage }}</a>
                             </p>
                         @endforeach
                     @endisset
