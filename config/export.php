@@ -69,6 +69,7 @@ return [
      */
     'before' => [
         'pest' => 'php artisan test --bail',
+        'dusk' => 'php artisan dusk --bail',
         'build' => 'npm run build',
         'sitemap' => 'php artisan sitemap:generate',
         'restore-link' => 'php artisan storage:link',
