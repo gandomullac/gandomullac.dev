@@ -47,10 +47,11 @@ class NicknameResource extends Resource
 
                 TextColumn::make('name')
                     ->label(__('blog.name')),
-            ])->reorderable('sort')
-            ->filters([
-
             ])
+            ->reorderable('sort')
+            ->defaultSort('sort')
+            ->paginated('all')
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
@@ -64,9 +65,7 @@ class NicknameResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-
-        ];
+        return [];
     }
 
     public static function getPages(): array
