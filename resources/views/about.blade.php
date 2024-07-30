@@ -24,7 +24,7 @@
                         <li>Web Development: I strive to write future-proof code.</li>
                         <li>DevOps: I'm used to manage the whole stack, from that one missing semicolon to the CI/CD during
                             deployment.</li>
-                        <li>TDD: because peace of mind is underestimated, and so are unit tests.</li>
+                        <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
                         <li>Obsidian.md: it is pretty awesome.</li>
                         <li>Cybersecurity: I played the part of the expert in a couple of courses I teached in.</li>
                         <li>IoT: both domestic and enterprise (I mostly like Philips Hue, they are so very nice).</li>

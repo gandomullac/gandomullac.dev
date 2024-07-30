@@ -75,7 +75,6 @@ return [
         'restore-link' => 'php artisan storage:link',
         'storage-unlink' => 'php artisan storage:unlink',
         'delete-link' => 'rmdir public\storage',
-        // 'assets' => '/usr/local/bin/yarn production',
     ],
 
     /*
@@ -86,7 +85,7 @@ return [
      */
     'after' => [
         'restore-link' => 'php artisan storage:link',
-        // 'deploy' => '/usr/local/bin/netlify deploy --prod',
+        'deploy-on-cf-pages' => 'npx wrangler pages deploy --commit-dirty=true'
     ],
 
 ];
