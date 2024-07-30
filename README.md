@@ -1,6 +1,6 @@
 Hello! My name is Claudio and I'm a techy based in Ferrara
 
-I'm currently a full-time consultant in a system engineer company, however I enjoy most working on developing web apps for clients using my favorite stacks.
+I'm currently a full-time consultant in a system engineering company, however I enjoy most working on developing web apps for clients using my favorite stacks.
 
 ## This repo
 
