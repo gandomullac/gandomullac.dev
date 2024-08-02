@@ -4,19 +4,19 @@
     xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
     xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
             <url>
-            <loc>https://gandomullac.com</loc>
+            <loc>https://gandomullac.dev</loc>
             
             </url>
             <url>
-            <loc>https://gandomullac.com/about</loc>
+            <loc>https://gandomullac.dev/about</loc>
             
             </url>
             <url>
-            <loc>https://gandomullac.com/projects</loc>
+            <loc>https://gandomullac.dev/projects</loc>
             
             </url>
             <url>
-            <loc>https://gandomullac.com/curriculum_it</loc>
+            <loc>https://gandomullac.dev/curriculum_it</loc>
                     <lastmod>2024-05-05T00:00:00+02:00</lastmod>
     
             </url>

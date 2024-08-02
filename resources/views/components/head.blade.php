@@ -26,7 +26,7 @@
         {
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "url": "https://www.gandomullac.com/",
+            "url": "https://www.gandomullac.dev/",
             "name": "Gandomullac's Portfolio",
             "author": {
                 "@type": "Person",
@@ -35,7 +35,7 @@
             "description": "gandomullac's portfolio",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://www.gandomullac.com/"
+                "@id": "https://www.gandomullac.dev/"
             }
         }
     </script>

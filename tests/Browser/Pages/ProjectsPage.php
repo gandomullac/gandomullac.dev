@@ -11,7 +11,7 @@ class ProjectsPage extends Page
      */
     public function url(): string
     {
-        return '/projects/';
+        return '/projects';
     }
 
     /**
