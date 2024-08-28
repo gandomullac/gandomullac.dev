@@ -12,7 +12,7 @@ class AboutPage extends Page
      */
     public function url(): string
     {
-        return '/about';
+        return '/about/';
     }
 
     /**
