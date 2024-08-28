@@ -16,8 +16,7 @@
 
                     <p>My name is Claudio and I'm a techy based in Ferrara</p>
                     <p>I'm currently a full-time consultant in a system engineering company, however I enjoy most working on
-                        developing
-                        web apps for clients using my favorite stacks.</p>
+                        developing web apps for clients using my favorite stacks.</p>
 
                     <h2 id="interests">Interests<a class="anchor" href="#interests">#</a></h2>
                     <ul>
@@ -26,7 +25,7 @@
                             deployment.</li>
                         <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
                         <li>Obsidian.md: it is pretty awesome.</li>
-                        <li>Cybersecurity: I played the part of the expert in a couple of courses I teached in.</li>
+                        <li>Cybersecurity: I teached in a course aimed at novices and plan to do it again soon enough.</li>
                         <li>IoT: both domestic and enterprise (I mostly like Philips Hue, they are so very nice).</li>
                         <li>Gym, beach tennis, cycling, music and everything tech.</li>
                     </ul>
