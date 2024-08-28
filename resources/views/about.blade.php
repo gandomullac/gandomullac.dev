@@ -21,13 +21,13 @@
                     <h2 id="interests">Interests<a class="anchor" href="#interests">#</a></h2>
                     <ul>
                         <li>Web Development: I strive to write future-proof code.</li>
-                        <li>DevOps: I'm used to manage the whole stack, from that one missing semicolon to the CI/CD during
-                            deployment.</li>
+                        <li>DevOps: I'm used to managing the whole stack, from that one missing semicolon to the CI/CD
+                            during deployment.</li>
                         <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
                         <li>Obsidian.md: it is pretty awesome.</li>
-                        <li>Cybersecurity: I teached in a course aimed at novices and plan to do it again soon enough.</li>
+                        <li>Cybersecurity: I taught a course aimed at novices and plan to do it again soon.</li>
                         <li>IoT: both domestic and enterprise (I mostly like Philips Hue, they are so very nice).</li>
-                        <li>Gym, beach tennis, cycling, music and everything tech.</li>
+                        <li>Gym, beach tennis, cycling, music, and everything tech.</li>
                     </ul>
 
                     <x-curricula :curricula="$curricula" />
