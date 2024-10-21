@@ -26,7 +26,7 @@
                         <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
                         <li>Obsidian.md: it is pretty awesome.</li>
                         <li>Cybersecurity: I taught a course aimed at novices and plan to do it again soon.</li>
-                        <li>IoT: both domestic and enterprise (I mostly like Philips Hue, they are so very nice).</li>
+                        <li>IoT: both domestic and enterprise (I mostly like Philips Hue light bulbs, they are so very nice).</li>
                         <li>Gym, beach tennis, cycling, music, and everything tech.</li>
                     </ul>
 
