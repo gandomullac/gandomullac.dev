@@ -11,6 +11,7 @@ class NavigationMenu extends Component
         ['label' => 'home', 'route' => 'home'],
         ['label' => 'projects', 'route' => 'projects'],
     ];
+
     /**
      * Create a new component instance.
      *

@@ -87,7 +87,7 @@ return [
      */
     'after' => [
         'restore-link' => 'php artisan storage:link',
-        'deploy-on-cf-pages' => 'npx wrangler pages deploy --commit-dirty=true'
+        'deploy-on-cf-pages' => 'npx wrangler pages deploy --commit-dirty=true',
     ],
 
 ];

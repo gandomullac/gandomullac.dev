@@ -3,22 +3,17 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\DownloadResource\Pages;
-use App\Filament\Resources\DownloadResource\RelationManagers;
 use App\Models\Download;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Tables;
-use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
-
+use Filament\Tables\Table;
 
 class DownloadResource extends Resource
 {
@@ -95,7 +90,7 @@ class DownloadResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+
         ];
     }
 

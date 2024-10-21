@@ -28,7 +28,6 @@ Route::get('/about', function () {
     return view('about', ['curricula' => $curricula]);
 })->name('about');
 
-
 Route::get('/download', function () {
     // $files = File::all();
     $downloads = Download::all();

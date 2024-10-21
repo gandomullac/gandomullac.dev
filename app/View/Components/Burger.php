@@ -13,7 +13,6 @@ class Burger extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**
