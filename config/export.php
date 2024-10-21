@@ -18,6 +18,7 @@ return [
         '/',
         '/about',
         'projects',
+        'download',
         // '/curriculum_it'
     ],
 
@@ -37,6 +38,7 @@ return [
         'public/build' => 'build',
         // 'public' => '',
         'storage\app\public\curriculum' => 'storage\curriculum',
+        'storage\app\public\download' => 'storage\download',
     ],
 
     /*

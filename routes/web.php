@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Curriculum;
+use App\Models\Download;
 use App\Models\Nickname;
 use App\Models\Project;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,11 @@ Route::get('/about', function () {
 
     return view('about', ['curricula' => $curricula]);
 })->name('about');
+
+
+Route::get('/download', function () {
+    // $files = File::all();
+    $downloads = Download::all();
+
+    return view('download', ['downloads' => $downloads]);
+})->name('download');
