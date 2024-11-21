@@ -23,7 +23,7 @@
             <span class="handle">System administrator <span class="fancy">|</span> WebDev</span>
 
             <h2>
-                Test Driven <span class="fancy-underline">Developer</span>
+                Artisanal <span class="fancy-underline">Developer</span>
             </h2>
 
 

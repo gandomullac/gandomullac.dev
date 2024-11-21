@@ -3,6 +3,7 @@
 
     <meta charset="UTF-8">
     <meta name="language" content="en">
+    <meta name="author" content="gandomullac">
     <meta name="description" content="gandomullac's portfolio">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -47,12 +47,12 @@ class GenerateSitemap extends Command
             $sitemap->add(Url::create($url['url'])->setPriority($url['priority']));
         }
 
-        // TODO: arbitrary date, will be updated.
-        foreach ($this->curricula as $url) {
-            $sitemap->add(Url::create($url['url'])
-                ->setPriority($url['priority'])
-                ->setLastModificationDate(Carbon::create(2024, 5, 5)));
-        }
+        // // TODO: arbitrary date, will be updated.
+        // foreach ($this->curricula as $url) {
+        //     $sitemap->add(Url::create($url['url'])
+        //         ->setPriority($url['priority'])
+        //         ->setLastModificationDate(Carbon::create(2024, 5, 5)));
+        // }
 
         $sitemap->writeToFile(public_path('sitemap.xml'));
     }

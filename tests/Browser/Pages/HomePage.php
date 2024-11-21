@@ -23,7 +23,7 @@ class HomePage extends Page
             ->assertPathIs($this->url())
             ->assertSee("Hi, I'm Claudio Gandini")
             ->assertSee('System administrator | WebDev')
-            ->assertSee('Test Driven Developer')
+            ->assertSee('Artisanal Developer')
             ->pause(3000)
             ->assertDontSee("Hi, I'm Claudio Gandini");
     }
