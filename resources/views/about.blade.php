@@ -15,18 +15,16 @@
                 <article class="post__content">
 
                     <p>My name is Claudio and I'm a techy based in Ferrara</p>
-                    <p>I'm currently a full-time consultant in a system engineering company, however I enjoy most working on
+                    <p>I'm full-time consultant in a system engineering company, however I enjoy most working on
                         developing web apps for clients using my favorite stacks. I also teach some courses from time to time.</p>
 
                     <h2 id="interests">Interests<a class="anchor" href="#interests">#</a></h2>
                     <ul>
-                        <li>Web Development: I strive to write future-proof code.</li>
-                        <li>DevOps: I'm used to managing the whole stack, from that one missing semicolon to the CI/CD
-                            during deployment.</li>
+                        <li>DevOps: I like to manage the whole stack, from VSCode to CI/CD.</li>
                         <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
-                        <li>Obsidian.md: it is pretty awesome.</li>
-                        <li>Cybersecurity: I taught a course aimed at novices and plan to do it again soon.</li>
-                        <li>IoT: both domestic and enterprise (I mostly like Philips Hue light bulbs, they are so very nice).</li>
+                        <li>Cybersecurity: I taught a course aimed at novices and plan to do it again.</li>
+                        <li>IoT: I bet my Philips Hue setup is better than yours.</li>
+                        <li>Motorcicles: I am really interested in getting a Svartpilen 401 someday.</li>
                         <li>Gym, beach tennis, cycling, music, and everything tech.</li>
                     </ul>
 
