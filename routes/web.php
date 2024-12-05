@@ -17,7 +17,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/projects', function () {
-    $projects = Project::all();
+    $projects = Project::orderByDesc('date')->get();
 
     return view('projects', ['projects' => $projects]);
 })->name('projects');
