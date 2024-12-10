@@ -24,6 +24,6 @@ class Download extends Model implements HasMedia
 
     public function getUrlAttribute(): string
     {
-        return asset($this->getFirstMedia('downloads')->getUrl());
+        return $this->getFirstMedia('downloads')->getUrl();
     }
 }

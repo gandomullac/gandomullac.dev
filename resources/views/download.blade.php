@@ -21,7 +21,7 @@
 
                     @foreach ($downloads as $download)
                         <p>
-                            <a href="{{ $download->url }}" id="download_{{ $download->name }}">{{ $download->name }}</a>
+                            <a href="{{ asset($download->url) }}" id="download_{{ $download->name }}">{{ $download->name }}</a>
                         </p>
                     @endforeach
 

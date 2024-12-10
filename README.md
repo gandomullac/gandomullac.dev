@@ -5,8 +5,7 @@ I'm currently a full-time consultant in a system engineering company, however I 
 ## This repo
 
 My previous "blog" was an HTML file with a list of projects written in 5 minutes. The intention was to write an interesting portfolio and, at the same time, refine my skills with Laravel, CI/CD, and free serverless hosting solutions.
-I decided to use a Laravel app to build and export a fully static website because I really enjoy the stack and wanted to bend it in an unusual way: a big thank you to [Spatie](https://spatie.be/) and their awesome [laravel-export package](https://github.com/spatie/laravel-export)!
-Also, I will be changing my domain to .dev someday (hence the name of the [github repo](https://github.com/gandomullac/gandomullac.dev)).
+Initially this was a static export made through the awesome [laravel-export package](https://github.com/spatie/laravel-export), however I ended up retiring this setup for a Forge+Octane one.
 
 This website is built using Laravel, Blade, Filament, SQLite, plain CSS & JS.
 
