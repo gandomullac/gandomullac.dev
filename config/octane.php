@@ -224,7 +224,8 @@ return [
     'swoole' => [
         'options' => [
             'log_file' => storage_path('logs/swoole_http.log'),
-            'package_max_length' => 20 * 1024 * 1024,
+            'package_max_length' => 28 * 1024 * 1024,
+            'max_request_size' => 28 * 1024 * 1024,
         ],
     ],
 ];
