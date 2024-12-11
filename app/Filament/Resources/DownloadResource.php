@@ -65,12 +65,12 @@ class DownloadResource extends Resource
                     ->label(__('blog.description'))
                     ->sortable(),
 
-                IconColumn::make('url')
-                    ->label(__('blog.url'))
-                    ->icon('heroicon-o-link')
-                    // Link ad uso interno.
-                    ->url(fn ($record) => $record->getFirstMedia('downloads')->getUrl())
-                    ->openUrlInNewTab(),
+                // IconColumn::make('url')
+                //     ->label(__('blog.url'))
+                //     ->icon('heroicon-o-link')
+                //     // Link ad uso interno.
+                //     ->url(fn ($record) => $record->getFirstMedia('downloads')->getUrl())
+                //     ->openUrlInNewTab(),
 
             ])
             ->filters([
