@@ -1,5 +1,33 @@
 <?php
 
+// TODO:
+// SISTEMARE INCOMPATIBILITA' CON WINDOWS, SE POSSIBILE.
+
+$sitemapPath = public_path('sitemap.xml');
+$urls = [
+    '/',
+];
+
+if (file_exists($sitemapPath)) {
+    $baseUrl = config('app.url'); // Recupera il dominio configurato
+    $xml = simplexml_load_file($sitemapPath);
+
+    foreach ($xml->url as $urlElement) {
+        $fullUrl = (string) $urlElement->loc;
+
+        // Rimuovi il dominio dal percorso
+        $relativePath = parse_url($fullUrl, PHP_URL_PATH);
+
+        // Verifica se $relativePath è una stringa e non è null
+        if (
+            $relativePath !== null &&
+            ! str_contains($relativePath, '/storage/')
+        ) {
+            $urls[] = $relativePath;
+        }
+    }
+}
+
 return [
 
     /*
@@ -14,13 +42,7 @@ return [
      *
      * For example: "about", "posts/featured"
      */
-    'paths' => [
-        '/',
-        '/about',
-        'projects',
-        'download',
-        // '/curriculum_it'
-    ],
+    'paths' => $urls,
 
     /*
      * Files and folders that should be included in the build. Expects
@@ -30,20 +52,12 @@ return [
      * By default your `public` folder's contents will be added to the export.
      */
     'include_files' => [
-        'public/svg' => 'svg',
-        'public/.htaccess' => '.htaccess',
-        'public/favicon.png' => 'favicon.png',
-        'public/robots.txt' => 'robots.txt',
-        'public/sitemap.xml' => 'sitemap.xml',
-        'public/build' => 'build',
-        // 'public' => '',
-        'storage\app\public\curriculum' => 'storage\curriculum',
-        'storage\app\public\download' => 'storage\download',
+        'public' => '',
     ],
 
     /*
-    * File patterns that should be excluded from the included files.
-    */
+     * File patterns that should be excluded from the included files.
+     */
     'exclude_file_patterns' => [
         '/\.php$/',
         '/mix-manifest\.json$/',
@@ -70,13 +84,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'before' => [
-        'pest' => 'php artisan test --bail',
-        // 'dusk' => 'php artisan dusk --bail',
-        'build' => 'npm run build',
-        'sitemap' => 'php artisan sitemap:generate',
-        'restore-link' => 'php artisan storage:link',
-        'storage-unlink' => 'php artisan storage:unlink',
-        'delete-link' => 'rmdir public\storage',
+        // 'assets' => '/usr/local/bin/yarn production',
     ],
 
     /*
@@ -86,8 +94,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'after' => [
-        'restore-link' => 'php artisan storage:link',
-        'deploy-on-cf-pages' => 'npx wrangler pages deploy --commit-dirty=true',
+        // 'deploy' => '/usr/local/bin/netlify deploy --prod',
     ],
 
 ];
