@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         FilamentView::registerRenderHook(
             'panels::head.start',
-            fn(): string => '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">',
+            fn (): string => '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">',
         );
 
         URL::forceScheme('https');

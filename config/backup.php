@@ -15,8 +15,8 @@ return [
                  * The list of directories and files that will be included in the backup.
                  */
                 'include' => [
-                    base_path('database' . DIRECTORY_SEPARATOR . 'database.sqlite'),
-                    base_path('storage' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'public'),
+                    base_path('database'.DIRECTORY_SEPARATOR.'database.sqlite'),
+                    base_path('storage'.DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.'public'),
                     base_path('.env'),
                 ],
 
