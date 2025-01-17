@@ -15,8 +15,8 @@ return [
                  * The list of directories and files that will be included in the backup.
                  */
                 'include' => [
-                    base_path('database'.DIRECTORY_SEPARATOR.'database.sqlite'),
-                    base_path('storage'.DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.'public'),
+                    base_path('database' . DIRECTORY_SEPARATOR . 'database.sqlite'),
+                    base_path('storage' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'public'),
                     base_path('.env'),
                 ],
 
@@ -196,12 +196,12 @@ return [
      */
     'notifications' => [
         'notifications' => [
-            \Spatie\Backup\Notifications\Notifications\BackupHasFailedNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\UnhealthyBackupWasFoundNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\CleanupHasFailedNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessfulNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFoundNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessfulNotification::class => ['mail'],
+            \Spatie\Backup\Notifications\Notifications\BackupHasFailedNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\UnhealthyBackupWasFoundNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\CleanupHasFailedNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessfulNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFoundNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessfulNotification::class => ['discord'],
         ],
 
         /*
@@ -233,12 +233,12 @@ return [
         ],
 
         'discord' => [
-            'webhook_url' => '',
+            'webhook_url' => env('BACKUP_DISCORD_WEBHOOK_URL'),
 
             /*
              * If this is an empty string, the name field on the webhook will be used.
              */
-            'username' => '',
+            'username' => env('BACKUP_DISCORD_USERNAME', 'Laravel Backup'),
 
             /*
              * If this is an empty string, the avatar on the webhook will be used.
