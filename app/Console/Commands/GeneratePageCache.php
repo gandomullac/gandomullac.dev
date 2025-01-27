@@ -27,5 +27,6 @@ class GeneratePageCache extends Command
     public function handle()
     {
         Crawler::create()->startCrawling(config('app.url'));
+        $this->info('Site has been crawled and cache has been generated.');
     }
 }
