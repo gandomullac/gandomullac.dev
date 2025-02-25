@@ -19,11 +19,14 @@
 
                     <h2 id="downloads">Downloads<a class="anchor" href="#downloads">#</a></h2>
 
-                    @foreach ($downloads as $download)
+                    @forelse ($downloads as $download)
                         <p>
-                            <a href="{{ asset($download->url) }}" id="download_{{ $download->name }}">{{ $download->name }}</a>
+                            <a href="{{ asset($download->url) }}"
+                                id="download_{{ $download->name }}">{{ $download->name }}</a>
                         </p>
-                    @endforeach
+                    @empty
+                        <p><i>There's nothing here...</i></p>
+                    @endforelse
 
 
 
