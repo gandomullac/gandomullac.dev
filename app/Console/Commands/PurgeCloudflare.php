@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
@@ -18,7 +19,7 @@ class PurgeCloudflare extends Command
      *
      * @var string
      */
-    protected $description = 'Purge entire Cloudflare cache';
+    protected $description = 'Purge the entire Cloudflare cache';
 
     /**
      * Execute the console command.
@@ -30,31 +31,41 @@ class PurgeCloudflare extends Command
         $zoneId = config('services.cloudflare.zone_id');
         $apiToken = config('services.cloudflare.api_token');
 
-        $client = new \GuzzleHttp\Client();
-
-        try {
-            $response = $client->request('POST', "https://api.cloudflare.com/client/v4/zones/{$zoneId}/purge_cache", [
-                'headers' => [
-                    'Authorization' => "Bearer {$apiToken}",
-                    'Content-Type' => 'application/json',
-                ],
-                'json' => [
-                    'purge_everything' => true,
-                ],
-            ]);
-
-            $body = json_decode($response->getBody(), true);
-
-            if ($body['success']) {
-                $this->info('Cloudflare cache purged successfully.');
-                return 0;
-            } else {
-                $this->error('Failed to purge Cloudflare cache: ' . json_encode($body['errors']));
-                return 1;
-            }
-        } catch (\Exception $e) {
-            $this->error('An error occurred: ' . $e->getMessage());
+        if (!$zoneId || !$apiToken) {
+            $this->error('Cloudflare configuration is missing. Please check your services configuration.');
             return 1;
+        }
+
+        $response = $this->purgeCache($zoneId, $apiToken);
+
+        if ($response['success']) {
+            $this->info('Cloudflare cache purged successfully.');
+            return 0;
+        }
+
+        $this->error('Failed to purge Cloudflare cache: ' . json_encode($response['errors'] ?? 'Unknown error'));
+        return 1;
+    }
+
+    /**
+     * Purge the Cloudflare cache for the given zone.
+     *
+     * @param string $zoneId
+     * @param string $apiToken
+     * @return array
+     */
+    private function purgeCache(string $zoneId, string $apiToken): array
+    {
+        try {
+            $response = Http::withToken($apiToken)
+                ->post("https://api.cloudflare.com/client/v4/zones/{$zoneId}/purge_cache", [
+                    'purge_everything' => true,
+                ]);
+
+            return $response->json();
+        } catch (\Exception $e) {
+            $this->error('An error occurred while purging the cache: ' . $e->getMessage());
+            return ['success' => false, 'errors' => [$e->getMessage()]];
         }
     }
 }
