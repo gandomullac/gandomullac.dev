@@ -31,8 +31,9 @@ class PurgeCloudflare extends Command
         $zoneId = config('services.cloudflare.zone_id');
         $apiToken = config('services.cloudflare.api_token');
 
-        if (!$zoneId || !$apiToken) {
+        if (! $zoneId || ! $apiToken) {
             $this->error('Cloudflare configuration is missing. Please check your services configuration.');
+
             return 1;
         }
 
@@ -40,19 +41,17 @@ class PurgeCloudflare extends Command
 
         if ($response['success']) {
             $this->info('Cloudflare cache purged successfully.');
+
             return 0;
         }
 
-        $this->error('Failed to purge Cloudflare cache: ' . json_encode($response['errors'] ?? 'Unknown error'));
+        $this->error('Failed to purge Cloudflare cache: '.json_encode($response['errors'] ?? 'Unknown error'));
+
         return 1;
     }
 
     /**
      * Purge the Cloudflare cache for the given zone.
-     *
-     * @param string $zoneId
-     * @param string $apiToken
-     * @return array
      */
     private function purgeCache(string $zoneId, string $apiToken): array
     {
@@ -64,7 +63,8 @@ class PurgeCloudflare extends Command
 
             return $response->json();
         } catch (\Exception $e) {
-            $this->error('An error occurred while purging the cache: ' . $e->getMessage());
+            $this->error('An error occurred while purging the cache: '.$e->getMessage());
+
             return ['success' => false, 'errors' => [$e->getMessage()]];
         }
     }
