@@ -9,7 +9,7 @@ use App\Traits\PageCachable;
 class Nickname extends Model
 {
     use HasFactory;
-    use PageCacheable;
+    use PageCachable;
 
     protected $fillable = [
         'name',
