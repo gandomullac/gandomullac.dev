@@ -14,5 +14,8 @@ trait PageCachable
         static::saved(function () {
             event(new PageCachingRequested);
         });
+        static::updated(function () {
+            event(new PageCachingRequested);
+        });
     }
 }

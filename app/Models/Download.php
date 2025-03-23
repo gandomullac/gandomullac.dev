@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\PageCachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
@@ -11,6 +12,7 @@ class Download extends Model implements HasMedia
 {
     use HasFactory;
     use InteractsWithMedia;
+    use PageCachable;
 
     protected $fillable = [
         'name',
