@@ -18,12 +18,10 @@
                 <h1>Hi, I'm <span id="typed-output">Claudio Gandini</span></h1>
             </div>
 
-
-
-            <span class="handle">System administrator <span class="fancy">|</span> WebDev</span>
+            <span class="handle">Coach <span class="fancy">|</span> R&D <span class="fancy">|</span> DevOps</span>
 
             <h2>
-                Artisanal <span class="fancy-underline">Developer</span>
+                Multirole fighter <span class="fancy-underline">Dev</span>
             </h2>
 
 

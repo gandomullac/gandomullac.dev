@@ -14,17 +14,17 @@
 
                 <article class="post__content">
 
-                    <p>My name is Claudio and I'm a techy based in Ferrara</p>
-                    <p>I'm full-time consultant in a system engineering company, however I enjoy most working on
-                        developing web apps for clients using my favorite stacks. I also teach some courses from time to time.</p>
+                    <p>My name is Claudio and I'm developer based in Ferrara, Italy</p>
+                    <p>I'm a full-time R&D programmer, however I also enjoy developing web apps for clients
+                        using my favorite stacks. I also teach courses from time to time.</p>
 
                     <h2 id="interests">Interests<a class="anchor" href="#interests">#</a></h2>
                     <ul>
                         <li>DevOps: I like to manage the whole stack, from VSCode to CI/CD.</li>
                         <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
-                        <li>Cybersecurity: I taught a course aimed at novices and plan to do it again.</li>
+                        <li>Cybersecurity: I believe in preventing headaches</li>
                         <li>IoT: I bet my Philips Hue setup is better than yours.</li>
-                        <li>Motorcicles: I am really interested in getting a Svartpilen 401 someday.</li>
+                        <li>Motorcicles: someday I'll get to ride in the sunset.</li>
                         <li>Gym, beach tennis, cycling, music, and everything tech.</li>
                     </ul>
 
