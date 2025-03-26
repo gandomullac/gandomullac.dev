@@ -25,6 +25,7 @@
                         <li>Cybersecurity: I believe in preventing headaches</li>
                         <li>IoT: I bet my Philips Hue setup is better than yours.</li>
                         <li>Motorcicles: someday I'll get to ride in the sunset.</li>
+                        <li>Planes: ... hell yeah.</li>
                         <li>Gym, beach tennis, cycling, music, and everything tech.</li>
                     </ul>
 
