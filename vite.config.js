@@ -17,5 +17,5 @@ export default defineConfig({
       refresh: true,
     }),
   ],
-  build: { rollupOptions: { external: ["instant.page"] } },
+  //   build: { rollupOptions: { external: ["instant.page"] } },
 });
