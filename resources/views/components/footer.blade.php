@@ -2,5 +2,5 @@
 
     <x-social-icons />
 
-    <p>© gandomullac 2024</p>
+    <p>© gandomullac {{ date('Y') }}</p>
 </footer>
