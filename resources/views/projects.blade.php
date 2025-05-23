@@ -52,8 +52,8 @@
                         </div>
                     @endforeach
 
-                    <h2 id="open-source-projects">Courses<a class="anchor"
-                            href="#open-source-projects">#</a></h2>
+                    <h2 id="courses">Courses<a class="anchor"
+                            href="#courses">#</a></h2>
 
                     @foreach ($projects->where('category', 3) as $project)
                         <div>
@@ -89,6 +89,13 @@
                     <li><a href="#open-source-projects" class="">Learning / Open Source Projects</a>
                         <ul>
                             @foreach ($projects->where('category', 2) as $project)
+                                <li><a href="#{{ $project->slug }}" class="active">{{ $project->subtitle }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+                    <li><a href="#courses" class="">Courses</a>
+                        <ul>
+                            @foreach ($projects->where('category', 3) as $project)
                                 <li><a href="#{{ $project->slug }}" class="active">{{ $project->subtitle }}</a></li>
                             @endforeach
                         </ul>
