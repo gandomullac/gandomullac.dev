@@ -46,6 +46,7 @@ class ProjectResource extends Resource
                             ->options([
                                 '1' => 'Commercial',
                                 '2' => 'Learning',
+                                '3' => 'Courses',
                             ])
                             ->required(),
 

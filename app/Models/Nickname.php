@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Traits\PageCachable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Traits\PageCachable;
 
 class Nickname extends Model
 {
