@@ -52,6 +52,20 @@
                         </div>
                     @endforeach
 
+                    <h2 id="open-source-projects">Courses<a class="anchor"
+                            href="#open-source-projects">#</a></h2>
+
+                    @foreach ($projects->where('category', 3) as $project)
+                        <div>
+
+                            <h3 id="{{ $project->slug }}">{{ $project->title }}<a class="anchor"
+                                    href="#{{ $project->slug }}">#</a></h3>
+
+                            {!! $project->description !!}
+
+                        </div>
+                    @endforeach
+
                 </article>
 
                 <x-footer />
