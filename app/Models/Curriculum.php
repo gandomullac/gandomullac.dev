@@ -7,11 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use App\Traits\PageCachable;
 
 class Curriculum extends Model implements HasMedia
 {
     use HasFactory;
     use InteractsWithMedia;
+    use PageCachable;
 
     protected $fillable = [
         'name',
