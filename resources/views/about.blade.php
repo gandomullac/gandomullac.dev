@@ -20,7 +20,7 @@
 
                     <h2 id="interests">Interests<a class="anchor" href="#interests">#</a></h2>
                     <ul>
-                        <li>DevOps: I like to manage the whole stack, from VSCode to CI/CD.</li>
+                        <li>DevOps: I enjoy managing the whole stack, from VSCode to CI/CD.</li>
                         <li>TDD: because peace of mind is undervalued, and so are unit tests.</li>
                         <li>Cybersecurity: I believe in preventing headaches</li>
                         <li>IoT: I bet my Philips Hue setup is better than yours.</li>
