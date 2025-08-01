@@ -1,0 +1,35 @@
+# docker-compose.yml
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    container_name: gandomullacdev-php
+    volumes:
+      - ./:/var/www/html/
+    networks:
+      - app-network
+  webserver:
+    image: nginx:alpine
+    container_name: gandomullacdev-nginx
+    ports:
+      - "${APP_PORT:-80}:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www/html/
+      - ./storage/app/public:/var/www/html/public/storage
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/certs:/etc/nginx/certs:ro
+    depends_on:
+      - php
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+volumes:
+  db-data:
+    driver: local
