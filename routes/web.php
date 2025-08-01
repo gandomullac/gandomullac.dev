@@ -34,3 +34,8 @@ Route::get('/download', function () {
 
     return view('download', ['downloads' => $downloads]);
 })->name('download');
+
+// Export 404
+Route::get('/404', function () {
+    return response()->view('errors.404', [], 200);
+})->name('export-404');

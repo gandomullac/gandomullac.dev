@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Support\UrlMacroRegistrar;
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        View::addNamespace('errors', resource_path('views/errors'));
+
         FilamentView::registerRenderHook(
             'panels::head.start',
             fn (): string => '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">',

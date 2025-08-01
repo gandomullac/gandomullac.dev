@@ -1,11 +1,11 @@
 <?php
 
-// TODO:
-// SISTEMARE INCOMPATIBILITA' CON WINDOWS, SE POSSIBILE.
+declare(strict_types=1);
 
 $sitemapPath = public_path('sitemap.xml');
 $urls = [
     '/',
+    '404'
 ];
 
 if (file_exists($sitemapPath)) {
@@ -53,6 +53,7 @@ return [
      */
     'include_files' => [
         'public' => '',
+        'storage/app/public' => 'storage',
     ],
 
     /*
