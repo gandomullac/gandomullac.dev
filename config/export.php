@@ -95,6 +95,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'after' => [
+        'deploy-on-cf-pages' => 'npx wrangler pages deploy --commit-dirty=true',
         // 'deploy' => '/usr/local/bin/netlify deploy --prod',
     ],
 
