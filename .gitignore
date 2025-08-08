@@ -20,7 +20,7 @@ yarn-error.log
 /.vscode
 /dist
 wrangler.toml
-
+.wrangler/
 **/caddy
 frankenphp
 frankenphp-worker.php
